@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articulate Kids — Every child, seen whole</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{
+  --navy:#12325C;
+  --navy-deep:#0B2140;
+  --navy-mid:#1C4A82;
+  --cream:#FBF7EF;
+  --cream-2:#F4EEE1;
+  --terra:#C4562A;
+  --terra-deep:#A2451F;
+  --terra-soft:#F6E7DC;
+  --blue-soft:#EAF0F9;
+  --ink:#20242C;
+  --ink-2:#5A5E68;
+  --ink-3:#94929A;
+  --line:#E7E0D2;
+  --line-blue:#CBD8EC;
+}
+body{font-family:'Outfit',system-ui,sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:30px}
+.serif{font-family:'Cormorant Garamond',serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.rise{animation:rise 1s cubic-bezier(.2,.8,.2,1) both}
+.r2{animation-delay:.12s}.r3{animation-delay:.26s}.r4{animation-delay:.42s}.r5{animation-delay:.58s}
+@media(prefers-reduced-motion:reduce){.rise{animation:none}}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(251,247,239,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1140px;margin:0 auto;padding:0 30px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:13px}
+.brand .mark{width:40px;height:40px;border-radius:11px;background:var(--navy);display:grid;place-items:center;flex-shrink:0}
+.brand .mark svg{width:21px;height:21px}
+.brand .wm{line-height:1}
+.brand .top{font-family:'Cormorant Garamond';font-size:22px;font-weight:600;color:var(--navy);letter-spacing:.01em}
+.brand .bot{font-size:9.5px;font-weight:600;color:var(--terra);text-transform:uppercase;letter-spacing:.2em;margin-top:2px}
+.nav-links{display:flex;gap:32px}
+.nav-links a{font-size:14px;color:var(--ink-2);transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--terra);color:#fff;font-size:13.5px;font-weight:500;padding:11px 24px;border-radius:100px;transition:.2s}
+.nav-cta:hover{background:var(--terra-deep);box-shadow:0 6px 20px rgba(196,86,42,.28)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1.15fr .85fr}
+.hero-l{background:var(--navy-deep);color:#fff;padding:88px 68px;position:relative;overflow:hidden}
+.hero-l::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(196,86,42,.2),transparent 65%);top:-160px;right:-170px}
+.kick{display:inline-flex;align-items:center;gap:11px;margin-bottom:34px;position:relative}
+.kick .ln{width:30px;height:1px;background:var(--terra)}
+.kick span{font-size:10.5px;font-weight:600;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.18em}
+.hero-l h1{font-family:'Cormorant Garamond';font-size:clamp(42px,5.4vw,62px);font-weight:500;line-height:1.06;letter-spacing:-.01em;position:relative;margin-bottom:26px}
+.hero-l h1 em{font-style:italic;color:#E9A582}
+.hero-l .lede{font-size:16.5px;color:rgba(255,255,255,.6);font-weight:300;line-height:1.75;max-width:44ch;margin-bottom:40px;position:relative}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px;position:relative}
+.btn{font-family:'Outfit';font-size:15px;font-weight:500;padding:15px 32px;border-radius:100px;cursor:pointer;border:none;transition:.2s}
+.btn-p{background:var(--terra);color:#fff}
+.btn-p:hover{background:var(--terra-deep);transform:translateY(-2px);box-shadow:0 8px 26px rgba(196,86,42,.4)}
+.btn-g{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.btn-g:hover{background:rgba(255,255,255,.16)}
+.trust{display:flex;flex-direction:column;gap:13px;position:relative}
+.trust div{display:flex;align-items:center;gap:13px;font-size:14px;color:rgba(255,255,255,.5);font-weight:300}
+.trust .dt{width:5px;height:5px;border-radius:50%;background:var(--terra);flex-shrink:0}
+.hero-r{background:var(--cream-2);padding:72px 52px;display:flex;flex-direction:column;justify-content:center}
+.hero-r .lab{font-size:10px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.18em;margin-bottom:24px}
+.ctags{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+.ctag{font-size:13px;color:var(--ink-2);background:#fff;border:1px solid var(--line);padding:8px 18px;border-radius:100px;transition:.2s}
+.ctag:hover{border-color:var(--navy);color:var(--navy)}
+.ctag.a{background:var(--terra);color:#fff;border-color:var(--terra)}
+.ctag.b{background:var(--navy);color:#fff;border-color:var(--navy)}
+.assure{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 28px;box-shadow:0 3px 24px rgba(18,50,92,.06)}
+.assure p{font-size:14px;color:var(--ink-2);font-weight:300;line-height:1.75;margin-bottom:16px}
+.abadges{display:flex;flex-wrap:wrap;gap:8px}
+.abadge{font-size:11.5px;font-weight:500;color:var(--navy);background:var(--blue-soft);padding:6px 14px;border-radius:100px}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.hero-l{padding:60px 34px}.hero-r{padding:48px 34px}}
+
+/* STRIP */
+.strip{background:#fff;border-bottom:1px solid var(--line);display:flex}
+.strip .cell{flex:1;display:flex;align-items:center;gap:13px;padding:22px 30px;border-right:1px solid var(--line);font-size:12.5px;color:var(--ink-2)}
+.strip .cell:last-child{border-right:none}
+.strip .ic{width:36px;height:36px;border-radius:10px;background:var(--blue-soft);display:grid;place-items:center;font-size:17px;flex-shrink:0}
+.strip b{display:block;font-size:13px;color:var(--navy);font-weight:600}
+@media(max-width:860px){.strip{flex-wrap:wrap}.strip .cell{width:50%;border-right:none;border-bottom:1px solid var(--line)}}
+@media(max-width:520px){.strip .cell{width:100%}}
+
+/* SECTION */
+section{padding:92px 0;border-bottom:1px solid var(--line)}
+.sec.white{background:#fff}
+.sec.navy{background:var(--navy-deep);border-bottom:none}
+.sec.terra{background:var(--terra-soft);border-bottom-color:#eeceb8}
+.sec.blue{background:var(--blue-soft)}
+.eye{font-size:10px;font-weight:700;color:var(--terra);text-transform:uppercase;letter-spacing:.18em;display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.eye::before{content:"";width:22px;height:1px;background:var(--terra)}
+.sec.navy .eye{color:#E9A582}.sec.navy .eye::before{background:#E9A582}
+.h2{font-family:'Cormorant Garamond';font-size:clamp(32px,4.6vw,46px);font-weight:500;color:var(--navy);line-height:1.1;letter-spacing:-.01em;margin-bottom:14px}
+.sec.navy .h2{color:#fff}
+.sub{font-size:16px;color:var(--ink-2);font-weight:300;line-height:1.8;max-width:56ch;margin-bottom:48px}
+.sec.navy .sub{color:rgba(255,255,255,.55)}
+
+/* APPROACH */
+.proto{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:24px}
+.pc{background:#fff;padding:38px 30px;transition:.2s}
+.pc:hover{background:#FCFAF5}
+.pc.feat{background:var(--navy)}
+.pc .n{font-family:'Cormorant Garamond';font-size:15px;font-weight:600;color:var(--ink-3);margin-bottom:22px}
+.pc.feat .n{color:rgba(255,255,255,.4)}
+.pc .ic{width:50px;height:50px;border-radius:13px;background:var(--blue-soft);display:grid;place-items:center;font-size:23px;margin-bottom:20px}
+.pc.feat .ic{background:rgba(255,255,255,.12)}
+.pc h3{font-size:16px;font-weight:600;margin-bottom:9px}
+.pc.feat h3{color:#fff}
+.pc p{font-size:14px;color:var(--ink-2);font-weight:300;line-height:1.7}
+.pc.feat p{color:rgba(255,255,255,.6)}
+.exc{display:inline-block;font-size:9.5px;font-weight:700;color:#E9A582;background:rgba(233,165,130,.16);padding:4px 11px;border-radius:100px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
+.rrow{background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:16px;padding:26px 34px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.rrow p{font-size:15px;color:rgba(255,255,255,.6);font-weight:300}
+.rrow strong{color:#fff;font-weight:500}
+.rrow .ar{font-size:24px;color:var(--terra)}
+
+/* TESTS */
+.tduo{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.tc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:40px;transition:.25s}
+.tc:hover{box-shadow:0 14px 46px rgba(18,50,92,.1);transform:translateY(-3px)}
+.tc .hd{display:flex;gap:18px;margin-bottom:20px}
+.tc .ic{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;font-size:27px;flex-shrink:0}
+.tc .ic.b{background:var(--blue-soft)}.tc .ic.o{background:var(--terra-soft)}
+.tc .nm{font-family:'Cormorant Garamond';font-size:24px;font-weight:600;color:var(--navy)}
+.tc .sb{font-size:12px;color:var(--ink-3)}
+.tc .bd{font-size:14.5px;color:var(--ink-2);font-weight:300;line-height:1.8;margin-bottom:22px}
+.tc .li{display:flex;flex-direction:column;gap:10px}
+.tc .it{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-2)}
+.tc .it .d{width:6px;height:6px;border-radius:50%;background:var(--terra);flex-shrink:0}
+.tnote{margin-top:26px;background:var(--navy);border-radius:16px;padding:22px 28px;font-size:14.5px;color:rgba(255,255,255,.6);font-weight:300;line-height:1.7}
+.tnote strong{color:#fff;font-weight:500}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+.st{padding-left:28px;border-left:2px solid var(--line)}
+.st .n{width:40px;height:40px;border-radius:50%;background:var(--terra);color:#fff;font-family:'Cormorant Garamond';font-size:19px;font-weight:600;display:grid;place-items:center;margin-bottom:20px}
+.st h3{font-size:17px;font-weight:600;color:var(--navy);margin-bottom:9px}
+.st p{font-size:14.5px;color:var(--ink-2);font-weight:300;line-height:1.75}
+
+/* QUOTES */
+.qg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px}
+.qc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px;font-size:14px;color:rgba(255,255,255,.55);font-style:italic;font-weight:300;line-height:1.8}
+.qc.big{grid-row:span 2;font-family:'Cormorant Garamond';font-size:22px;color:rgba(255,255,255,.9);background:rgba(255,255,255,.1);line-height:1.4}
+.qattr{display:block;margin-top:18px;font-family:'Outfit';font-style:normal;font-size:10.5px;font-weight:600;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.12em}
+
+/* WEBINAR */
+.wg{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.wtopics{display:flex;flex-direction:column;gap:13px;margin:26px 0 30px}
+.wtopics div{display:flex;align-items:center;gap:14px;font-size:15px;color:var(--ink-2);font-weight:300}
+.wtopics .d{width:7px;height:7px;border-radius:50%;background:var(--terra);flex-shrink:0}
+.wdate{display:inline-flex;align-items:center;gap:14px;background:var(--navy);color:#fff;font-size:13px;font-weight:500;padding:13px 24px;border-radius:100px}
+.wdate em{font-style:normal;font-size:11px;color:rgba(255,255,255,.5);font-weight:300}
+.wcard{background:#fff;border:1px solid #EACBB4;border-radius:20px;padding:42px;box-shadow:0 14px 52px rgba(196,86,42,.12)}
+.wcard .free{display:inline-block;background:#E6F5EE;color:#0C7A50;font-size:9.5px;font-weight:700;padding:4px 12px;border-radius:100px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px}
+.wcard h3{font-family:'Cormorant Garamond';font-size:25px;font-weight:600;color:var(--navy);margin-bottom:10px}
+.wcard p{font-size:14px;color:var(--ink-3);font-weight:300;line-height:1.7;margin-bottom:24px}
+.field{width:100%;padding:14px 18px;border:1px solid var(--line);border-radius:11px;font-family:'Outfit';font-size:15px;margin-bottom:12px;background:var(--cream);outline:none;transition:.2s}
+.field:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 3px rgba(18,50,92,.08)}
+.wcard .btn-p{width:100%}
+.wfine{font-size:11.5px;color:var(--ink-3);text-align:center;margin-top:12px;font-weight:300}
+
+/* FOUNDER */
+.fg{display:grid;grid-template-columns:290px 1fr;gap:60px;align-items:start}
+.fp{border-radius:20px;background:var(--blue-soft);aspect-ratio:3/4;display:grid;place-items:center;text-align:center;box-shadow:0 14px 52px rgba(18,50,92,.12)}
+.fp .mono{font-family:'Cormorant Garamond';font-size:74px;color:var(--navy)}
+.fp .nt{font-size:11px;color:var(--ink-3);padding:0 26px;margin-top:8px}
+.fname{font-family:'Cormorant Garamond';font-size:38px;font-weight:500;color:var(--navy);margin-bottom:6px}
+.frole{font-size:13px;color:var(--ink-3);margin-bottom:26px}
+.fbio{font-size:15px;color:var(--ink-2);font-weight:300;line-height:1.9;margin-bottom:30px}
+.creds{margin-bottom:28px}
+.cr{display:flex;gap:16px;padding:17px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink-2);font-weight:300}
+.cr:first-child{border-top:1px solid var(--line)}
+.cr .ci{font-size:20px}
+.cr b{display:block;color:var(--ink);font-weight:600;font-size:14.5px;margin-bottom:2px}
+.brow{display:flex;align-items:center;gap:18px;background:var(--terra-soft);border:1px solid #EACBB4;border-radius:15px;padding:18px 22px;margin-bottom:26px}
+.brow .em{font-size:28px}
+.brow .bt{font-size:13.5px;font-weight:600;color:var(--terra-deep)}
+.brow .bs{font-size:12.5px;color:#9A6244;font-weight:300;margin-top:2px}
+.press{display:flex;flex-wrap:wrap;gap:8px}
+.press span{font-size:11.5px;font-weight:500;color:var(--navy);background:var(--blue-soft);border:1px solid var(--line-blue);padding:6px 15px;border-radius:100px}
+
+/* EHCP */
+.eduo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.ec{background:#fff;border:1px solid var(--line-blue);border-radius:18px;padding:38px;transition:.25s}
+.ec:hover{box-shadow:0 12px 44px rgba(18,50,92,.1);transform:translateY(-3px)}
+.ec .ci{font-size:32px;margin-bottom:16px;display:block}
+.ec h3{font-size:17px;font-weight:600;color:var(--navy);margin-bottom:10px}
+.ec p{font-size:14.5px;color:var(--ink-2);font-weight:300;line-height:1.8}
+.ec a{display:inline-block;margin-top:16px;font-size:14px;font-weight:500;color:var(--terra)}
+
+/* FAQ */
+.faqw{max-width:780px}
+.fi{border-bottom:1px solid var(--line)}
+.fi:first-child{border-top:1px solid var(--line)}
+.fq{width:100%;background:none;border:none;text-align:left;font-family:'Outfit';font-size:15px;font-weight:500;color:var(--navy);padding:22px 0;display:flex;justify-content:space-between;gap:18px;cursor:pointer}
+.fq .t{width:30px;height:30px;border-radius:50%;background:var(--blue-soft);color:var(--navy);display:grid;place-items:center;font-size:20px;flex-shrink:0;transition:.25s}
+.fi.open .t{background:var(--navy);color:#fff;transform:rotate(45deg)}
+.fa{font-size:14.5px;color:var(--ink-2);font-weight:300;line-height:1.85;padding-bottom:20px;display:none}
+.fi.open .fa{display:block}
+
+/* FOOTER */
+.fcta{padding:80px 0;background:var(--terra)}
+.fcta-in{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+.fcta h2{font-family:'Cormorant Garamond';font-size:40px;font-weight:500;color:#fff;margin-bottom:10px}
+.fcta p{font-size:15px;color:rgba(255,255,255,.72);font-weight:300;margin-bottom:24px}
+.fcontacts{display:flex;gap:26px;flex-wrap:wrap}
+.fci{font-size:13.5px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:8px}
+.fbtns{display:flex;flex-direction:column;gap:12px}
+.bfw{background:#fff;color:var(--terra);font-size:15px;font-weight:600;padding:15px 38px;border-radius:100px;border:none;cursor:pointer;font-family:'Outfit';white-space:nowrap;transition:.2s}
+.bfw:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.bfo{background:transparent;color:#fff;font-size:15px;padding:15px 38px;border-radius:100px;border:1.5px solid rgba(255,255,255,.4);cursor:pointer;font-family:'Outfit';white-space:nowrap}
+footer{background:var(--navy-deep);color:rgba(255,255,255,.5);padding:28px 0;font-size:13px}
+.foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media(max-width:860px){
+  .proto{grid-template-columns:1fr 1fr}
+  .tduo{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .qg{grid-template-columns:1fr}.qc.big{grid-row:auto}
+  .wg{grid-template-columns:1fr;gap:36px}
+  .fg{grid-template-columns:1fr;gap:32px}.fp{max-width:280px}
+  .eduo{grid-template-columns:1fr}
+  .fcta-in{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:520px){section{padding:60px 0}.proto{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#">
+      <span class="mark"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7.5" r="3.6" fill="#fff" opacity=".92"/><path d="M4 16c0-3.2 2.7-5 6-5s6 1.8 6 5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".6"/></svg></span>
+      <span class="wm"><span class="top">Articulate Kids</span><br><span class="bot">Specialist Clinic</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#approach">What we do</a>
+      <a href="#tests">Our tests</a>
+      <a href="#webinar">Webinar</a>
+      <a href="#founder">About Hulya</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="nav-cta" href="#">Book an appointment</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-l">
+    <div class="kick rise"><span class="ln"></span><span>The only clinic of its kind in the UK</span></div>
+    <h1 class="rise r2">Worried about your child's development or <em>communication?</em></h1>
+    <p class="lede rise r3">We can help. Articulate Kids is a specialist clinic for children aged 20 months to 18 years, based in Orpington and London.</p>
+    <div class="hero-btns rise r4">
+      <button class="btn btn-p">Book an appointment</button>
+      <button class="btn btn-g">020 3858 0765</button>
+    </div>
+    <div class="trust rise r5">
+      <div><span class="dt"></span>25 years of specialist experience</div>
+      <div><span class="dt"></span>No waiting lists. No referral needed.</div>
+      <div><span class="dt"></span>Exclusive UK provider of advanced testing</div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="lab">We support children with</div>
+    <div class="ctags">
+      <span class="ctag a">Late talking</span>
+      <span class="ctag b">Autism</span>
+      <span class="ctag b">ADHD</span>
+      <span class="ctag">Speech disorders</span>
+      <span class="ctag">Motor coordination</span>
+      <span class="ctag">Sensory sensitivities</span>
+      <span class="ctag">Behavioural difficulties</span>
+      <span class="ctag">Emotional difficulties</span>
+      <span class="ctag">Sleep difficulties</span>
+      <span class="ctag">Developmental delay</span>
+    </div>
+    <div class="assure">
+      <p>We look at the whole child, so nothing gets missed. You don't need a diagnosis or a referral to come to us. Ages 20 months to 18 years.</p>
+      <div class="abadges">
+        <span class="abadge">No diagnosis needed</span>
+        <span class="abadge">No referral needed</span>
+        <span class="abadge">Book online today</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="cell"><div class="ic">⭐</div><div><b>25 years</b>specialist experience</div></div>
+  <div class="cell"><div class="ic">🔬</div><div><b>Exclusive UK</b>lab testing provider</div></div>
+  <div class="cell"><div class="ic">⚡</div><div><b>Advanced tech</b>&amp; proven results</div></div>
+  <div class="cell"><div class="ic">⚖️</div><div><b>Expert witness</b>SEN tribunals</div></div>
+  <div class="cell"><div class="ic">📅</div><div><b>No waiting lists</b>book online today</div></div>
+</div>
+
+<section class="sec white" id="approach">
+  <div class="wrap">
+    <div class="eye">What we do</div>
+    <h2 class="h2">A complete approach.<br>Nothing missed.</h2>
+    <p class="sub">We look at the whole child, not just one part of them. Our approach combines specialist clinical expertise with the most advanced testing and technology available anywhere in the UK.</p>
+    <div class="proto">
+      <div class="pc"><div class="n">01</div><div class="ic">🩺</div><h3>We assess</h3><p>Highly specialist assessment of your child's full development and communication picture. 25 years of expertise behind every one.</p></div>
+      <div class="pc feat"><div class="exc">Exclusive UK provider</div><div class="n">02</div><div class="ic">🔬</div><h3>We test</h3><p>Advanced neurological and gut health testing from our specialist US labs. Answers that can't be found anywhere else in the country.</p></div>
+      <div class="pc"><div class="n">03</div><div class="ic">⚡</div><h3>We treat</h3><p>Specialist speech and language therapy combined with advanced technology, and proven results. Care no other UK clinic can offer.</p></div>
+      <div class="pc"><div class="n">04</div><div class="ic">🏆</div><h3>We get results</h3><p>Every child reaches their maximum potential. We work with a small number of families so each one gets the care they deserve.</p></div>
+    </div>
+    <div class="rrow"><p><strong>We deliberately work with a small number of families</strong> so that every child receives the highest level of care and attention.</p><div class="ar">→</div></div>
+  </div>
+</section>
+
+<section class="sec" id="tests">
+  <div class="wrap">
+    <div class="eye">Our specialist tests</div>
+    <h2 class="h2">Answers most clinics<br>cannot find.</h2>
+    <p class="sub">As the exclusive UK provider of this advanced testing, we uncover what's really going on with your child, in their brain and their gut.</p>
+    <div class="tduo">
+      <div class="tc">
+        <div class="hd"><div class="ic b">🧠</div><div><div class="nm">Neurological test</div><div class="sb">Brain health panel · Specialist US labs</div></div></div>
+        <p class="bd">Looks at exactly what's happening in your child's brain. Checks for inflammation and immune reactions that affect how your child thinks, communicates, focuses and behaves.</p>
+        <div class="li"><div class="it"><div class="d"></div>Focus and attention</div><div class="it"><div class="d"></div>Communication and language</div><div class="it"><div class="d"></div>Mood and behaviour</div><div class="it"><div class="d"></div>Neurological inflammation</div></div>
+      </div>
+      <div class="tc">
+        <div class="hd"><div class="ic o">💚</div><div><div class="nm">Gut health test</div><div class="sb">Gut-brain connection · Specialist US labs</div></div></div>
+        <p class="bd">The gut and brain are directly connected. An imbalance in the gut can have a significant impact on your child's behaviour, mood, sleep, focus and development.</p>
+        <div class="li"><div class="it"><div class="d"></div>Sleep and mood</div><div class="it"><div class="d"></div>Digestive health</div><div class="it"><div class="d"></div>Focus and development</div><div class="it"><div class="d"></div>Food sensitivities</div></div>
+      </div>
+    </div>
+    <div class="tnote"><strong>Both tests together give us the most complete picture.</strong> We recommend them as a pair, but they're not required to access our service.</div>
+  </div>
+</section>
+
+<section class="sec white">
+  <div class="wrap">
+    <div class="eye">How to get started</div>
+    <h2 class="h2">Three simple steps.</h2>
+    <p class="sub">No waiting lists. No referrals. No complicated processes. Just book online and we'll take care of everything else.</p>
+    <div class="steps">
+      <div class="st"><div class="n">1</div><h3>Book your assessment</h3><p>Select a preschool age assessment (under 5, not yet at school) or a school age assessment (5 and over). Fees are shown at booking.</p></div>
+      <div class="st"><div class="n">2</div><h3>Add your lab tests</h3><p>Add neurological and gut health tests at the same time or after your assessment. Most parents tell us it's the best decision they made.</p></div>
+      <div class="st"><div class="n">3</div><h3>Confirm and pay</h3><p>You'll receive an email confirmation, a payment link, and full instructions for your lab test. Our team is with you every step.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec navy">
+  <div class="wrap">
+    <div class="eye">What parents are saying</div>
+    <h2 class="h2">Real results. Real families.</h2>
+    <p class="sub">These are the words of parents whose children have been through the Articulate Kids programme.</p>
+    <div class="qg">
+      <div class="qc big">"She has gone from just a few spoken words to stringing short sentences together. She is happy, confident and loves talking. When we first came she would just gaze into the distance and hardly speak. The change is beyond anything we imagined."<span class="qattr">Parent at Articulate Kids</span></div>
+      <div class="qc">"He is speaking. Actually speaking. We waited years for this."</div>
+      <div class="qc">"Her hearing sensitivity has reduced completely. She no longer covers her ears."</div>
+      <div class="qc">"After just seven sessions his mood is consistently calm. We can't believe the difference."</div>
+      <div class="qc">"Our son tried new foods for the first time in four years. After just four sessions."</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec terra" id="webinar">
+  <div class="wrap">
+    <div class="wg">
+      <div>
+        <div class="eye" style="color:var(--terra-deep)"><span></span>Free monthly webinar</div>
+        <h2 class="h2">Join Hulya live<br>once a month.</h2>
+        <p class="sub" style="margin-bottom:0">Every first Tuesday of the month at 8pm, Hulya hosts a free live webinar for parents, sharing the science, the latest advances, and practical guidance to help your child move forward.</p>
+        <div class="wtopics">
+          <div><div class="d"></div>Sensory sensitivities and how to help your child</div>
+          <div><div class="d"></div>Brain and gut health, the science explained simply</div>
+          <div><div class="d"></div>Autism and ADHD, the latest research</div>
+          <div><div class="d"></div>Treatment options to help your child move forward</div>
+        </div>
+        <div class="wdate">📅 First Tuesday of every month · 8pm <em>Free to attend</em></div>
+      </div>
+      <div class="wcard">
+        <span class="free">Free</span>
+        <h3>Get the link for the next webinar</h3>
+        <p>Put your name and email below and we'll send you the link before the next session.</p>
+        <input class="field" type="text" placeholder="Your first name">
+        <input class="field" type="email" placeholder="Your email address">
+        <button class="btn btn-p">Send me the link</button>
+        <p class="wfine">No spam. Just the webinar link and occasional updates from Hulya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec white" id="founder">
+  <div class="wrap">
+    <div class="fg">
+      <div class="fp"><div><div class="mono">HM</div><p class="nt">Professional photograph of Hulya to go here</p></div></div>
+      <div>
+        <div class="eye">Our founder</div>
+        <div class="fname">Hulya Mehmet</div>
+        <div class="frole">Founder &amp; Specialist Clinical Lead · 25 years experience · MRCSLT</div>
+        <p class="fbio">Hulya Mehmet has spent 25 years working with children who communicate differently. She is a specialist speech and language therapist, the founder of Articulate Kids, and one of the UK's leading experts in child communication and neurodiversity. She founded the clinic 20 years ago out of a deep dedication to children, and one simple belief: every child deserves the chance to reach their maximum potential.</p>
+        <div class="creds">
+          <div class="cr"><span class="ci">⚖️</span><div><b>Expert witness for SEN tribunals</b>Regularly called upon as an expert witness in complex EHCP and SEN tribunal cases.</div></div>
+          <div class="cr"><span class="ci">🔬</span><div><b>Exclusive UK provider of advanced health testing</b>Neurological and gut health panels sourced from specialist US laboratories.</div></div>
+          <div class="cr"><span class="ci">🎓</span><div><b>25 years of specialist clinical experience</b>Autism, ADHD and neurodevelopmental conditions throughout her career.</div></div>
+        </div>
+        <div class="brow"><span class="em">📖</span><div><div class="bt">Author of "Is It Autism or Late Talking?"</div><div class="bs">One of the most important books for parents of children with autism and late talking</div></div></div>
+        <div class="press"><span>Daily Telegraph</span><span>Brainz Magazine</span><span>Published author</span><span>Podcast host</span><span>SEN expert witness</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec blue">
+  <div class="wrap">
+    <div class="eye">EHCP &amp; SEN Tribunals</div>
+    <h2 class="h2">Going through the EHCP process?</h2>
+    <p class="sub">Hulya has extensive experience supporting families through the EHCP assessment process and SEN tribunals. If you need specialist clinical evidence or expert witness support, we can help.</p>
+    <div class="eduo">
+      <div class="ec"><span class="ci">📋</span><h3>EHCP Assessment Support</h3><p>Detailed specialist reports to support EHCP applications and reviews. Our assessments are recognised by local authorities and carry the clinical weight families need to secure the right provision for their child.</p><a href="#">Find out more →</a></div>
+      <div class="ec"><span class="ci">⚖️</span><h3>Expert Witness Reports</h3><p>Hulya is regularly instructed as an expert witness in complex SEN tribunal cases. An independent specialist report from Hulya can make a significant difference to the outcome.</p><a href="#">Find out more →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec white" id="faq">
+  <div class="wrap">
+    <div class="eye">FAQ</div>
+    <h2 class="h2">Your questions answered.</h2>
+    <p class="sub">Everything you need to know before you book.</p>
+    <div class="faqw">
+      <div class="fi"><button class="fq" onclick="tf(this)">My child doesn't have a diagnosis. Can we still come?<span class="t">+</span></button><div class="fa">Yes. You don't need a diagnosis or a referral. If you're worried about your child, that's enough.</div></div>
+      <div class="fi"><button class="fq" onclick="tf(this)">How old does my child need to be?<span class="t">+</span></button><div class="fa">We work with children aged 20 months to 18 years.</div></div>
+      <div class="fi"><button class="fq" onclick="tf(this)">Which assessment should I book?<span class="t">+</span></button><div class="fa">If your child is under 5 and hasn't started school, book a preschool age assessment. If they're 5 or older and have started school, book a school age assessment.</div></div>
+      <div class="fi"><button class="fq" onclick="tf(this)">Do I have to book the lab tests?<span class="t">+</span></button><div class="fa">No. The lab tests aren't required to access our service. However we strongly recommend them, as they give us a level of understanding about your child that significantly improves the results we can achieve.</div></div>
+      <div class="fi"><button class="fq" onclick="tf(this)">Can I book therapy without an assessment?<span class="t">+</span></button><div class="fa">No. All children begin with an assessment. Even with a previous NHS or private assessment, we still carry out our own specialist assessment to make sure we have the complete picture.</div></div>
+      <div class="fi"><button class="fq" onclick="tf(this)">Can I speak to someone before I book?<span class="t">+</span></button><div class="fa">Yes. Call 020 3858 0765 or email info@articulatekids.co.uk. Our telephonist takes your message and a member of our clinical team gets back to you within 3 working days.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="fcta">
+  <div class="wrap fcta-in">
+    <div>
+      <h2>Ready to take the next step?</h2>
+      <p>Book an appointment online or give us a call. No pressure. No obligation.</p>
+      <div class="fcontacts"><div class="fci">📞 020 3858 0765</div><div class="fci">✉️ info@articulatekids.co.uk</div><div class="fci">🌐 articulatekids.co.uk</div></div>
+    </div>
+    <div class="fbtns"><button class="bfw">Book an appointment</button><button class="bfo">Call us now</button></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© Articulate Kids · Orpington &amp; London</span>
+    <span>Specialist neurodevelopmental clinic</span>
+  </div>
+</footer>
+
+<script>
+function tf(b){var i=b.closest('.fi');var o=i.classList.contains('open');document.querySelectorAll('.fi').forEach(function(x){x.classList.remove('open')});if(!o)i.classList.add('open')}
+</script>
+</body>
+</html>
