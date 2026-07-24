@@ -86,3 +86,4 @@ post,/when-should-my-child-start-talking-age-by-age-speech-milestones/,ERR HTTP 
 post,/working-memory-and-dyslexia-what-every-parent-should-know/,ERR HTTP Error 403: Forbidden,,TO-BUILD
 condition,/conditions-help/adhd/,(NEW) ADHD | Articulate Kids,ADHD,BUILT (new design: condition-adhd.html)
 condition,/conditions-help/dysphagia/,(NEW) Dysphagia | Articulate Kids,Dysphagia,BUILT (new design: condition-dysphagia.html)
+core-page,/photobiomodulation-light-therapy-children/,Photobiomodulation and Light Therapy for Children - Articulate Kids,"Photobiomodulation, light therapy & laser therapy for children",BUILT+LIVE on staging (page-slug template + FAQ/author schema)
