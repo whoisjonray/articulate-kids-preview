@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ways to work with us | Articulate Kids (package proposal)</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{--cream:#FEF6EE;--cream-2:#FCEBDA;--apricot:#FBE0C9;--apricot-2:#F6C99F;--coral:#E56B47;--amber:#F4A63D;--indigo:#3B3684;--indigo-2:#524CA0;--indigo-deep:#2A2660;--ink:#3A2F28;--ink-2:#7A6C61;--ink-3:#B3A498;--gold:#C9893D;--line:#F0DEC9}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin-inline:auto;padding-left:clamp(24px,4vw,48px);padding-right:clamp(24px,4vw,48px)}
+h1,h2,h3,h4{font-family:'Baloo 2',cursive;font-weight:700;line-height:1.14;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+svg.ic{width:22px;height:22px;stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.btn{font-family:'Baloo 2';font-weight:600;font-size:16px;padding:14px 28px;border-radius:100px;cursor:pointer;border:none;transition:transform .16s,box-shadow .25s,background .2s;display:inline-flex;align-items:center;gap:9px}
+.btn-p{background:var(--coral);color:#fff;box-shadow:0 12px 26px rgba(229,107,71,.34)}
+.btn-p:hover{background:#D25938;transform:translateY(-2px)}
+.btn-w{background:#fff;color:var(--indigo);box-shadow:0 8px 22px rgba(58,47,40,.1)}
+.btn-w:hover{transform:translateY(-2px)}
+section{padding-top:clamp(46px,6vw,80px);padding-bottom:clamp(46px,6vw,80px)}
+.sec-eye{display:inline-flex;align-items:center;gap:8px;font-family:'Baloo 2';font-weight:600;font-size:13.5px;color:var(--coral);background:var(--cream-2);padding:6px 15px;border-radius:100px;margin-bottom:14px}
+.sec-h{font-family:'Baloo 2';font-size:clamp(26px,4vw,40px);font-weight:800;color:var(--indigo)}
+.center{text-align:center;max-width:760px;margin-inline:auto}
+.center .sec-h{margin-inline:auto}
+.lead{font-size:17.5px;color:var(--ink-2);line-height:1.7;margin-top:14px}
+
+/* ---- internal note (does NOT ship to the live site) ---- */
+.note{background:var(--indigo-deep);color:#EDEAFB;padding-top:34px;padding-bottom:34px}
+.note h4{color:#fff;font-size:19px;margin-bottom:6px}
+.note .tag{display:inline-block;font-family:'Baloo 2';font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:var(--amber);color:#3A2F28;padding:5px 13px;border-radius:100px;margin-bottom:14px}
+.note p{font-size:15.5px;line-height:1.75;margin-top:10px;color:#D6D1F2;max-width:78ch}
+.note b{color:#fff}
+.note ol{margin-top:12px;padding-left:20px;max-width:78ch}
+.note li{font-size:15.5px;line-height:1.75;margin-bottom:7px;color:#D6D1F2}
+
+/* ---- hero ---- */
+.hero{position:relative;overflow:hidden;padding-top:clamp(40px,5vw,64px)}
+.hero .blob{position:absolute;width:340px;height:340px;border-radius:50%;background:var(--apricot);top:-110px;right:-120px;z-index:0}
+.hero-in{position:relative;z-index:1;max-width:760px}
+.hero h1{font-size:clamp(36px,5.6vw,58px);font-weight:800;color:var(--indigo);margin-bottom:16px}
+.hero .lede{font-size:clamp(17px,2vw,20px);color:var(--ink-2);max-width:56ch;line-height:1.62}
+
+/* ---- package cards ---- */
+.packs{background:var(--cream-2)}
+.pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px;align-items:stretch}
+.pk{background:#fff;border-radius:26px;padding:32px 28px 30px;box-shadow:0 14px 34px rgba(58,47,40,.07);position:relative;display:flex;flex-direction:column;height:100%}
+.pk.best{box-shadow:0 20px 46px rgba(59,54,132,.16);border:2px solid var(--indigo);padding-top:38px}
+.pk-flag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--indigo);color:#fff;font-family:'Baloo 2';font-weight:600;font-size:13px;padding:7px 20px;border-radius:100px;white-space:nowrap}
+.pk-for{font-family:'Baloo 2';font-weight:600;font-size:13px;color:var(--coral);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.pk h3{font-size:25px;color:var(--indigo);margin-bottom:10px}
+.pk-blurb{font-size:15.5px;color:var(--ink-2);line-height:1.65;margin-bottom:20px}
+.pk-price{font-family:'Baloo 2';font-weight:800;font-size:40px;color:var(--ink);line-height:1;margin-bottom:5px}
+.pk-price small{font-family:'Nunito';font-weight:600;font-size:15px;color:var(--ink-3)}
+.pk-sub{font-size:14px;color:var(--ink-3);font-weight:600;margin-bottom:22px}
+.pk ul{list-style:none;margin-bottom:26px}
+.pk li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:var(--ink-2);line-height:1.55;margin-bottom:12px}
+.pk li svg{flex-shrink:0;margin-top:2px;color:var(--coral);width:19px;height:19px}
+.pk .btn{width:100%;justify-content:center;margin-top:auto}
+@media(max-width:900px){.pack-grid{grid-template-columns:1fr;gap:26px}.pk.best{margin-top:14px}}
+
+/* ---- between-sessions band ---- */
+.between{background:var(--indigo);color:#fff}
+.between .sec-h{color:#fff}
+.between .lead{color:#CFCAEE}
+.bt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:36px}
+.bt{background:rgba(255,255,255,.09);border-radius:20px;padding:24px 22px}
+.bt h4{font-size:17.5px;color:#fff;margin-bottom:7px}
+.bt p{font-size:14.8px;color:#CFCAEE;line-height:1.6}
+
+/* ---- extras ---- */
+.ex-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:34px}
+.ex{background:#fff;border-radius:20px;padding:26px 24px;box-shadow:0 8px 22px rgba(58,47,40,.055)}
+.ex h4{font-size:19px;color:var(--indigo);margin-bottom:8px}
+.ex .p{font-family:'Baloo 2';font-weight:700;font-size:24px;color:var(--ink);margin-bottom:8px}
+.ex p{font-size:15.2px;color:var(--ink-2);line-height:1.62}
+
+/* ---- reassurance ---- */
+.re{background:var(--cream-2)}
+.re-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:32px}
+.rc{background:#fff;border-radius:20px;padding:26px 24px;box-shadow:0 8px 22px rgba(58,47,40,.05)}
+.rc h4{font-size:18px;color:var(--indigo);margin-bottom:7px}
+.rc p{font-size:15.2px;color:var(--ink-2);line-height:1.62}
+
+/* ---- cta ---- */
+.cta{text-align:center}
+.cta .sec-h{margin-inline:auto;max-width:20ch}
+.cta .lead{margin-inline:auto;max-width:56ch}
+.cta-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+</style>
+</head>
+<body>
+
+<!-- ================= INTERNAL NOTE: delete this section before it goes live ================= -->
+<section class="note">
+  <div class="wrap">
+    <span class="tag">For Hulya: not part of the page</span>
+    <h4>Why these numbers, and what I need from you</h4>
+    <p>Your £90 is <b>not the problem</b>. It's right at the going rate. West London charge £88 for 45 minutes, ISLTS £85 an hour, Children's Wellness Centre £70 to £95. What they do differently is <b>charge for everything that isn't the session</b>. West London bill the progress report at £125, a school observation at £40 per half hour, a meeting at £40 per half hour, and a home programme at £80 an hour, all on top. That's the work you're currently doing for free, and it's why you feel like you're on £45.</p>
+    <p>So the fix isn't a cheaper bundle. A discounted block would make it worse. The fix is to <b>put the between-session work inside the price</b> and sell the block as one thing.</p>
+    <ol>
+      <li><b>The £795 block, checked against the market:</b> the same thing at West London comes to about £773 once a parent adds the report, a home programme and one school call, plus travel. So £795 all-in is competitive <i>and</i> simpler for the parent.</li>
+      <li><b>What it does for you:</b> today 6 sessions bring in £540 for roughly 12 hours of your time once the admin is counted, which is the £45 you described. At £795 the same block is about £66 an hour. Not perfect, but roughly a 45% rise without pricing yourself out.</li>
+      <li><b>Single sessions go up to £110</b> and are for existing families only. That's deliberate. It makes the block the obvious buy and stops the ad-hoc bookings that create most of the admin.</li>
+    </ol>
+    <p><b>Three things I can't fill in without you:</b> (1) what you currently charge for an assessment, so £295 is either right or gets replaced; (2) what the Neural Zoomer and Gut Zoomer panels cost you, so the Whole Child price is real and not a guess; (3) whether 6 sessions or 8 is the right block for how you actually work. The clinics I looked at are split between the two.</p>
+    <p><b>Four things on this page I made up, because you don't have a stated policy on them.</b> Confirm, change or delete each one and I'll update it: the free 15-minute call at the bottom (ISLTS offer a free 20-minute one and it's a good filter for you, but you don't currently offer anything like it); payment in three monthly instalments; unused sessions staying live for six months; and 48 hours' notice to move an appointment. None of these should go live as written until you've said yes to them.</p>
+  </div>
+</section>
+<!-- ================= END INTERNAL NOTE ================= -->
+
+<section class="hero">
+  <div class="wrap">
+    <div class="blob"></div>
+    <div class="hero-in">
+      <span class="sec-eye">Ways to work with us</span>
+      <h1>Pick the way that fits your family.</h1>
+      <p class="lede">Most families start with an assessment, then a block of therapy. Some want the whole picture from the beginning. There's no wrong door, and you can change your mind as you go.</p>
+    </div>
+  </div>
+</section>
+
+<section class="packs">
+  <div class="wrap">
+    <div class="center">
+      <span class="sec-eye">Our three options</span>
+      <h2 class="sec-h">Everything's included. No surprise invoices.</h2>
+      <p class="lead">Reports, home programmes, emails between sessions and a call with your child's nursery or school are part of the price, not added to it afterwards.</p>
+    </div>
+
+    <div class="pack-grid">
+
+      <!-- 1 -->
+      <div class="pk">
+        <div class="pk-for">Start here</div>
+        <h3>Assessment</h3>
+        <p class="pk-blurb">A thorough, unhurried look at how your child is getting on, and a clear written picture of what we found.</p>
+        <div class="pk-price">£295</div>
+        <div class="pk-sub">One-off</div>
+        <ul>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>A full assessment appointment</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>A written report you can share with your GP, nursery or school</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>A conversation with Hulya about what it all means</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Honest advice on whether therapy is needed at all</span></li>
+        </ul>
+        <button class="btn btn-w">Book an assessment</button>
+      </div>
+
+      <!-- 2 -->
+      <div class="pk best">
+        <span class="pk-flag">Where most families start</span>
+        <div class="pk-for">The usual next step</div>
+        <h3>Therapy Block</h3>
+        <p class="pk-blurb">Six weekly sessions, plus all the work that happens between them. This is where children make the change you can actually see.</p>
+        <div class="pk-price">£795</div>
+        <div class="pk-sub">Six sessions over about seven weeks</div>
+        <ul>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Six therapy sessions with Hulya</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>A home programme, updated every single week</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Email support between sessions, so you're never stuck waiting</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>A call with your child's nursery or school</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>A progress summary at the end, in writing</span></li>
+        </ul>
+        <button class="btn btn-p">Start a therapy block</button>
+      </div>
+
+      <!-- 3 -->
+      <div class="pk">
+        <div class="pk-for">The full picture</div>
+        <h3>Whole Child Programme</h3>
+        <p class="pk-blurb">For families who want to know what's driving the difficulty, not just work on the symptoms. Speech therapy alongside laboratory testing and Lights On<sup>™</sup>.</p>
+        <div class="pk-price">POA <small>&nbsp;price on application</small></div>
+        <div class="pk-sub">Usually runs over a term</div>
+        <ul>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Full assessment and written report</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Brain and gut laboratory testing, with results explained properly</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>A block of Lights On<sup>™</sup> Pathways Method sessions</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Twelve speech and language therapy sessions</span></li>
+          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>School liaison and a full end-of-programme report</span></li>
+        </ul>
+        <button class="btn btn-w">Talk to Hulya first</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="between">
+  <div class="wrap">
+    <div class="center">
+      <span class="sec-eye" style="background:rgba(255,255,255,.14);color:#fff">What you're actually paying for</span>
+      <h2 class="sec-h">The hour in the room is about half of it.</h2>
+      <p class="lead">Every block includes the work that happens when your child isn't here. Most of it is invisible to parents, and it's the part that makes therapy stick.</p>
+    </div>
+    <div class="bt-grid">
+      <div class="bt">
+        <h4>Planning your child's sessions</h4>
+        <p>Every session is built around where your child got to last week, not pulled off a shelf.</p>
+      </div>
+      <div class="bt">
+        <h4>Writing your home programme</h4>
+        <p>Rewritten each week so what you're doing at home matches what we did in the room.</p>
+      </div>
+      <div class="bt">
+        <h4>Talking to nursery and school</h4>
+        <p>So the adults around your child are all pulling in the same direction.</p>
+      </div>
+      <div class="bt">
+        <h4>Answering you between sessions</h4>
+        <p>When something comes up on a Tuesday, you shouldn't have to sit on it until Friday.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="sec-eye">Everything else</span>
+      <h2 class="sec-h">If a block isn't what you need.</h2>
+    </div>
+    <div class="ex-grid">
+      <div class="ex">
+        <h4>Single session</h4>
+        <div class="p">£110</div>
+        <p>For families we already know, who want a one-off check-in or a top-up between blocks.</p>
+      </div>
+      <div class="ex">
+        <h4>Keeping On Track</h4>
+        <div class="p">£145 <span style="font-family:'Nunito';font-weight:600;font-size:15px;color:var(--ink-3)">a month</span></div>
+        <p>After a block. One session a month, your programme kept up to date, and email support in between. Cancel whenever you like.</p>
+      </div>
+      <div class="ex">
+        <h4>EHCP and tribunal reports</h4>
+        <div class="p">POA</div>
+        <p>Expert reports for EHCPs and SEND tribunals, from one of the UK's most experienced expert witnesses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="re">
+  <div class="wrap">
+    <div class="center">
+      <span class="sec-eye">Before you ask</span>
+      <h2 class="sec-h">The things parents worry about.</h2>
+    </div>
+    <div class="re-grid">
+      <div class="rc">
+        <h4>Do I have to commit to a block?</h4>
+        <p>If we assess your child and therapy isn't what they need, we'll tell you. Plenty of families come once and that's the end of it.</p>
+      </div>
+      <div class="rc">
+        <h4>Why six sessions?</h4>
+        <p>Because one or two won't move anything. Six weeks is roughly where change starts to hold, and you get a written summary at the end so you can decide what's next.</p>
+      </div>
+      <div class="rc">
+        <h4>Can I spread the cost?</h4>
+        <p>Yes. A block can be paid in three monthly instalments. Just ask when you book.</p>
+      </div>
+      <div class="rc">
+        <h4>What if we need to stop?</h4>
+        <p>Life happens. Unused sessions stay on your account for six months, and you can move an appointment with 48 hours' notice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="sec-h">Not sure which one?</h2>
+    <p class="lead">Start with a free call. Fifteen minutes with Hulya, no pressure, and you'll leave knowing what your child actually needs.</p>
+    <div class="cta-btns">
+      <button class="btn btn-p">Book a free call</button>
+      <button class="btn btn-w">Come to the free webinar</button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
